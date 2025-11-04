@@ -103,7 +103,7 @@ with col2:
     
     
 with col3:
-    st.image("RX/pictures/design.png", width=300)
+    st.image("RX/pictures/EventPortal.png", width=300)
     st.markdown('<a href="app.py">', unsafe_allow_html=True)
 
 
