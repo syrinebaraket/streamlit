@@ -33,7 +33,7 @@ for param in ['Flowrate', 'Pressure', 'Vibration']:
 selected_params = st.sidebar.multiselect("Parameters to Plot", all_params, default=['Temperature', 'Energy'])
 
 # --- Date-Time Filter ---
-st.subheader("Time Range")
+st.subheader("Select Time Range")
 col1, col2 = st.columns(2)
 with col1:
     start_dt = st.date_input("Start Date", value=events_df['StartTime'].min().date())
@@ -69,7 +69,6 @@ filtered_metrics = metrics_df[
     (metrics_df['Timestamp'] >= start_datetime)
 ]
 
-st.write(selected_equipment)
 
 # --- Main Content ---
 st.title("Equipment Event & Metrics Dashboard")
