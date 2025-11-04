@@ -11,7 +11,8 @@ if "logged_in" not in st.session_state or not st.session_state.logged_in:
 
 st.set_page_config(
     layout='centered',
-    page_title='Rubix'
+    page_title='Rubix',
+    page_icon="🧩"
 )
 
 
@@ -130,6 +131,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
