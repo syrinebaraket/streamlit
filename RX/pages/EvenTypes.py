@@ -4,7 +4,7 @@ import os
 
 # --- File Path ---
 EVENT_FILE = "RX/files/event_definitions.csv"
-st.set_page_config(page_title="Events",page_icon=🧩)
+st.set_page_config(page_title="Events",page_icon="🧩")
 # --- Custom CSS ---
 st.markdown("""
     <style>
@@ -85,6 +85,7 @@ if st.session_state.show_add_form:
         else:
 
             st.error("Please enter both Event Type and Version.")
+
 
 
 
