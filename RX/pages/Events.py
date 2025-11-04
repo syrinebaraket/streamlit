@@ -4,8 +4,8 @@ import plotly.express as px
 from datetime import datetime
 
 # --- Load Data ---
-events_df = pd.read_csv("files/events.csv", parse_dates=["StartTime", "EndTime"])
-metrics_df = pd.read_csv("files/metrics.csv", parse_dates=["Timestamp"])
+events_df = pd.read_csv("RX/files/events.csv", parse_dates=["StartTime", "EndTime"])
+metrics_df = pd.read_csv("RX/files/metrics.csv", parse_dates=["Timestamp"])
 
 # --- Sidebar Filters ---
 st.sidebar.header("🔍 Filters")
