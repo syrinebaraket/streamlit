@@ -180,9 +180,6 @@ def img_to_html(img_path):
     return img_html
 
 
-
-)
-
 st.html(
 ''' <div class="productContainer">
         <div class="card">
@@ -206,6 +203,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
