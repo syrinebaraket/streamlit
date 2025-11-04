@@ -16,27 +16,27 @@ if "show_add_form" not in st.session_state:
     st.session_state.show_add_form = False
 
 # --- Title ---
-st.title("🧩 Event Type Manager")
+st.title("Event Type Manager")
 
 # --- Display Table ---
-st.markdown("### 📋 Defined Event Types")
+st.markdown("###  Defined Event Types")
 st.dataframe(event_df, use_container_width=True)
 
 # --- Button Row ---
 col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 with col1:
-    if st.button("➕ Add"):
+    if st.button("Add"):
         st.session_state.show_add_form = True
 with col2:
-    st.button("✏️ Edit")  # Placeholder
+    st.button("Edit")  # Placeholder
 with col3:
-    st.button("🗑️ Delete")  # Placeholder
+    st.button("Delete")  # Placeholder
 with col4:
-    st.button("✅ Select All")  # Placeholder
+    st.button("Select All")  # Placeholder
 
 # --- Add Form ---
 if st.session_state.show_add_form:
-    st.markdown("### 🆕 Add New Event Type")
+    st.markdown("### Add New Event Type")
 
     new_event_type = st.text_input("Event Type Name")
     version = st.text_input("Version")
@@ -51,7 +51,7 @@ if st.session_state.show_add_form:
 
     expression = st.text_area("Trigger Expression (Python-like)", height=150, placeholder="e.g., Temperature > 80 and Vibration < 5")
 
-    if st.button("💾 Save"):
+    if st.button("Save"):
         if new_event_type and version:
             new_row = pd.DataFrame([{
                 "EventType": new_event_type,
@@ -65,4 +65,5 @@ if st.session_state.show_add_form:
             st.success("Event Type saved successfully!")
             st.session_state.show_add_form = False
         else:
+
             st.error("Please enter both Event Type and Version.")
