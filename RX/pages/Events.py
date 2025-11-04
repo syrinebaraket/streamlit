@@ -71,7 +71,7 @@ filtered_metrics = metrics_df[
 
 
 # --- Main Content ---
-st.title("Equipment Event & Metrics Dashboard")
+st.subheader("Equipment Events")
 st.markdown(f"**Site:** `{selected_site}` | **Area:** `{selected_area}` | **Cell:** `{selected_cell}`")
 
 
