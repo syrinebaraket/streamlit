@@ -64,9 +64,7 @@ filtered_metrics = metrics_df[
     (metrics_df['AreaID'] == selected_area_id) &
     (metrics_df['Cell'] == selected_cell) &
     (metrics_df['CellID'] == selected_cell_id)&
-    (events_df['Equipment'].isin(selected_equipment)) &
-    (events_df['StartTime'] <= end_datetime) &
-    (events_df['EndTime'] >= start_datetime)
+    (events_df['Equipment'].isin(selected_equipment))
 ]
 
 # --- Main Content ---
