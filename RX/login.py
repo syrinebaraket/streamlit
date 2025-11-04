@@ -64,7 +64,7 @@ st.markdown("""
 
 # --- Login Box ---
 
-st.image("pictures/Picture2.png" )
+st.image("RX/pictures/Picture2.png" )
 st.markdown('<div class="login-header">Sign in </div>', unsafe_allow_html=True)
 
 username = st.text_input("Username", placeholder="Enter your username")
@@ -86,4 +86,5 @@ if st.button("Sign in", key="login", help="Click to log in"):
 st.button("Cancel", key="cancel")
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
