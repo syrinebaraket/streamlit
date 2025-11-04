@@ -1,0 +1,41 @@
+EventID,Site,Area,AreaID,Cell,CellID,Equipment,EventType,StartTime,EndTime
+E001,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Started,2025-10-14 08:00,2025-10-14 12:00
+E002,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Stopped,2025-10-14 12:00,2025-10-14 13:30
+E003,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Started,2025-10-14 13:30,2025-10-14 18:00
+E004,1001,Utilities,A01,BoilerRoom,C02,Boiler,Stopped,2025-10-15 09:00,2025-10-15 10:15
+E005,2303,Process,B01,CIPStation,C03,CIPLines,Started,2025-10-16 07:00,2025-10-16 15:00
+E006,2303,Process,B01,CIPStation,C03,CIPLines,Stopped,2025-10-16 15:00,2025-10-16 16:00
+E007,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Stopped,2025-10-17 09:00,2025-10-17 10:00
+E008,1001,Utilities,A01,BoilerRoom,C02,Boiler,Started,2025-10-17 10:00,2025-10-17 14:00
+E009,2303,Process,B01,CIPStation,C03,CIPLines,Started,2025-10-17 14:00,2025-10-17 18:00
+E010,0076,Packaging,C01,Packaging Line,C04,Conveyors,Stopped,2025-10-18 08:00,2025-10-18 09:30
+E011,0076,Packaging,C01,Packaging Line,C04,Conveyors,Started,2025-10-18 09:30,2025-10-18 17:00
+E012,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Stopped,2025-10-19 07:00,2025-10-19 08:30
+E013,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Started,2025-10-19 08:30,2025-10-19 12:00
+E014,2303,Process,B01,CIPStation,C03,CIPLines,Stopped,2025-10-19 12:00,2025-10-19 13:00
+E015,2303,Process,B01,CIPStation,C03,CIPLines,Started,2025-10-19 13:00,2025-10-19 17:00
+E016,0076,Packaging,C01,Packaging Line,C04,Conveyors,Stopped,2025-10-20 09:00,2025-10-20 10:30
+E017,0076,Packaging,C01,Packaging Line,C04,Conveyors,Started,2025-10-20 10:30,2025-10-20 16:00
+E018,1001,Utilities,A01,BoilerRoom,C02,Boiler,Stopped,2025-10-20 16:00,2025-10-20 17:30
+E019,1001,Utilities,A01,BoilerRoom,C02,Boiler,Started,2025-10-20 17:30,2025-10-20 20:00
+E020,2303,Process,B01,CIPStation,C03,CIPLines,Stopped,2025-10-21 08:00,2025-10-21 09:00
+E021,2303,Process,B01,CIPStation,C03,CIPLines,Started,2025-10-21 09:00,2025-10-21 15:00
+E022,0076,Packaging,C01,Packaging Line,C04,Conveyors,Stopped,2025-10-21 15:00,2025-10-21 16:30
+E023,0076,Packaging,C01,Packaging Line,C04,Conveyors,Started,2025-10-21 16:30,2025-10-21 20:00
+E024,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Stopped,2025-10-21 20:00,2025-10-21 21:30
+E025,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Started,2025-10-21 21:30,2025-10-21 23:00
+E026,2303,Process,B01,CIPStation,C03,CIPLines,Stopped,2025-10-21 23:00,2025-10-22 00:30
+E027,2303,Process,B01,CIPStation,C03,CIPLines,Started,2025-10-22 00:30,2025-10-22 06:00
+E028,0076,Packaging,C01,Packaging Line,C04,Conveyors,Stopped,2025-10-22 06:00,2025-10-22 07:30
+E029,0076,Packaging,C01,Packaging Line,C04,Conveyors,Started,2025-10-22 07:30,2025-10-22 12:00
+E030,1001,Utilities,A01,BoilerRoom,C02,Boiler,Stopped,2025-10-22 12:00,2025-10-22 13:30
+E031,1001,Utilities,A01,BoilerRoom,C02,Boiler,Started,2025-10-22 13:30,2025-10-22 17:00
+E032,2303,Process,B01,CIPStation,C03,CIPLines,Stopped,2025-10-22 17:00,2025-10-22 18:30
+E033,2303,Process,B01,CIPStation,C03,CIPLines,Started,2025-10-22 18:30,2025-10-22 22:00
+E034,0076,Packaging,C01,Packaging Line,C04,Conveyors,Stopped,2025-10-22 22:00,2025-10-23 00:00
+E035,0076,Packaging,C01,Packaging Line,C04,Conveyors,Started,2025-10-23 00:00,2025-10-23 06:00
+E036,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Stopped,2025-10-23 06:00,2025-10-23 07:30
+E037,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,Started,2025-10-23 07:30,2025-10-23 12:00
+E038,2303,Process,B01,CIPStation,C03,CIPLines,Stopped,2025-10-23 12:00,2025-10-23 13:30
+E039,2303,Process,B01,CIPStation,C03,CIPLines,Started,2025-10-23 13:30,2025-10-23 17:00
+E040,0076,Packaging,C01,Packaging Line,C04,Conveyors,Stopped,2025-10-23 17:00,2025-10-23 18:30
