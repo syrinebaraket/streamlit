@@ -64,7 +64,9 @@ filtered_metrics = metrics_df[
     (metrics_df['AreaID'] == selected_area_id) &
     (metrics_df['Cell'] == selected_cell) &
     (metrics_df['CellID'] == selected_cell_id)&
-    (events_df['Equipment'].isin(selected_equipment))
+    (metrics_df['Equipment'].isin(selected_equipment))&
+    (metrics_df['Timestamp'] <= end_datetime) &
+    (metrics_df['Timestamp'] >= start_datetime)
 ]
 
 st.write(selected_equipment)
