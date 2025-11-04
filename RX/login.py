@@ -56,22 +56,22 @@ st.markdown('<div class="login-header">Sign in </div>', unsafe_allow_html=True)
 username = st.text_input("Username", placeholder="Enter your username")
 password = st.text_input("Password", placeholder="Enter your password", type="password")
 
-if st.button("Sign in", type="secondary",width="stretch",key="login", help="Click to log in"):
-    if username == "TechTeam" and password == "danone123":  # Replace with secure logic
-        st.success("Login successful!")
-        st.session_state.logged_in = True
-        sleep(1)
+col1, col2 = st.columns([1, 1])
 
-        st.switch_page("pages/homepage.py")
-
-
-
-    else:
-        st.error("Invalid credentials. Please try again.")
-
-st.button("Cancel", width="stretch",key="cancel")
+with col1:
+    if st.button("Sign in", type="secondary",key="login", help="Click to log in",width="stretch"):
+        if username == "TechTeam" and password == "danone123":  # Replace with secure logic
+            st.success("Login successful!")
+            st.session_state.logged_in = True
+            sleep(1)
+            st.switch_page("pages/homepage.py")
+        else:
+            st.error("Invalid credentials. Please try again.")
+with col2:
+    st.button("Cancel",type="primary", key="cancel", width="stretch")
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
