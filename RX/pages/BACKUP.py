@@ -168,6 +168,18 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
+
+def img_to_bytes(img_path):
+    img_bytes = Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+def img_to_html(img_path):
+    img_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(
+      img_to_bytes(img_path)
+    )
+    return img_html
+
+
 st.markdown('''<div class="productContainer">
         <div class="card">
             <div class="header" style="height: 17rem;"> <img src="./RX/pictures/CortexLogo.png" alt="Product" /> </div>
@@ -179,7 +191,7 @@ st.markdown('''<div class="productContainer">
             </div>
         </div>
         <div class="card">
-            <div class="header" style="height: 17rem;"> <img src="RX/pictures/Rubix.png" alt="Rubix"> </div>
+            <div class="header" style="height: 17rem;"> img_to_html('pictures/Rubix.png) alt="Rubix"> </div>
             <div class="footer">
                 <div class="title">
                     <h2>RUBIX</h2>
@@ -214,6 +226,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
