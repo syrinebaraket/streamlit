@@ -8,7 +8,7 @@ events_df = pd.read_csv("RX/files/events.csv", parse_dates=["StartTime", "EndTim
 metrics_df = pd.read_csv("RX/files/metrics.csv", parse_dates=["Timestamp"])
 
 # --- Sidebar Filters ---
-st.sidebar.header("🔍 Filters")
+st.sidebar.header("Filters")
 selected_site = st.sidebar.selectbox("Site", events_df['Site'].unique())
 filtered_area = events_df[events_df['Site'] == selected_site]
 selected_area = st.sidebar.selectbox("Area", filtered_area['Area'].unique())
@@ -33,7 +33,7 @@ for param in ['Flowrate', 'Pressure', 'Vibration']:
 selected_params = st.sidebar.multiselect("Parameters to Plot", all_params, default=['Temperature', 'Energy'])
 
 # --- Date-Time Filter ---
-st.subheader("📅 Time Range")
+st.subheader("Time Range")
 col1, col2 = st.columns(2)
 with col1:
     start_dt = st.date_input("Start Date", value=events_df['StartTime'].min().date())
@@ -70,12 +70,12 @@ filtered_metrics = metrics_df[
 ]
 
 # --- Main Content ---
-st.title("📊 Equipment Event & Metrics Dashboard")
+st.title("Equipment Event & Metrics Dashboard")
 st.markdown(f"**Site:** `{selected_site}` | **Area:** `{selected_area}` | **Cell:** `{selected_cell}`")
 
 
 # --- Event Table Filter ---
-st.subheader("📋 Event List")
+st.subheader("Event List")
 event_filter_equipment = st.multiselect("Filter Events by Equipment", filtered_events['Equipment'].unique(), default=filtered_events['Equipment'].unique())
 event_filter_type = st.multiselect("Filter Events by Type", filtered_events['EventType'].unique(), default=filtered_events['EventType'].unique())
 
@@ -87,7 +87,7 @@ filtered_event_table = filtered_events[
 st.dataframe(filtered_event_table[['EventType', 'Equipment', 'StartTime', 'EndTime']].sort_values('StartTime'), use_container_width=True)
 
 # --- Status Chart ---
-st.subheader("🕒 Status Timeline")
+st.subheader("Status Timeline")
 status_map = {'Started': 1, 'Stopped': 0, 'Idle': 0.5}
 status_points = []
 
@@ -146,7 +146,7 @@ st.plotly_chart(fig_status, use_container_width=True)
 
 
 # --- Parameter Charts ---
-st.subheader("📈 Performance Metrics")
+st.subheader("Performance Metrics")
 for param in selected_params:
     fig = px.line(
         filtered_metrics,
