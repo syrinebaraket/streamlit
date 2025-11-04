@@ -4,6 +4,18 @@ import os
 
 # --- File Path ---
 EVENT_FILE = "RX/files/event_definitions.csv"
+# --- Custom CSS ---
+st.markdown("""
+    <style>
+    
+    button[kind="secondary"] {
+        background-color: blue !important;
+        color: white !important;
+        font-weight: bold;
+        border-radius: 6px;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 # --- Load Existing Events ---
 if os.path.exists(EVENT_FILE):
@@ -20,7 +32,7 @@ st.markdown("###  Defined Event Types")
 # --- Button Row ---
 col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
 with col1:
-    if st.button("Add",width="stretch"):
+    if st.button("Add",type="secondary",width="stretch"):
         st.session_state.show_add_form = True
 with col2:
     st.button("Edit",width="stretch")  # Placeholder
@@ -67,6 +79,7 @@ if st.session_state.show_add_form:
         else:
 
             st.error("Please enter both Event Type and Version.")
+
 
 
 
