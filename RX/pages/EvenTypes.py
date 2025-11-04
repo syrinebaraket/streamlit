@@ -17,22 +17,23 @@ if "show_add_form" not in st.session_state:
 
 # --- Title ---
 st.title("Event Type Manager")
+# --- Button Row ---
+col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+with col1:
+    if st.button("Add",width="stretch"):
+        st.session_state.show_add_form = True
+with col2:
+    st.button("Edit",width="stretch")  # Placeholder
+with col3:
+    st.button("Delete",width="stretch")  # Placeholder
+with col4:
+    st.button("Select All",width="stretch")  # Placeholder
 
 # --- Display Table ---
 st.markdown("###  Defined Event Types")
 st.dataframe(event_df, use_container_width=True)
 
-# --- Button Row ---
-col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
-with col1:
-    if st.button("Add"):
-        st.session_state.show_add_form = True
-with col2:
-    st.button("Edit")  # Placeholder
-with col3:
-    st.button("Delete")  # Placeholder
-with col4:
-    st.button("Select All")  # Placeholder
+
 
 # --- Add Form ---
 if st.session_state.show_add_form:
@@ -67,4 +68,5 @@ if st.session_state.show_add_form:
         else:
 
             st.error("Please enter both Event Type and Version.")
+
 
