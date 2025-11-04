@@ -181,14 +181,14 @@ def img_to_html(img_path):
 
 
 
-img = Image.open('RX/pictures/CortexLogo.png')
+img = Image.open('RX/pictures/RubixLogo.png')
 st.write(img)
 st.image(img)
 
 st.html(
 '''<div class="productContainer">
         <div class="card">
-            <div class="header" style="height: 17rem;"> <img src=img alt="Product" /> </div>
+            <div class="header" style="height: 17rem;"> <img src="https://sbtest.streamlit.app/~/+/media/6540bd9addaf2a79cbd1c6a9f0885046c84ef1e8accd4bfe736792ca.png" alt="Product" /> </div>
             <div class="footer">
                 <div class="title">
                     <h2>CORTEX</h2>
@@ -208,6 +208,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
