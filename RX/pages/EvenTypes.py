@@ -37,7 +37,7 @@ if "show_add_form" not in st.session_state:
 st.markdown("###  Defined Event Types")
 
 # --- Button Row ---
-col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     if st.button("Add",type="secondary",width="stretch"):
         st.session_state.show_add_form = True
@@ -45,8 +45,6 @@ with col2:
     st.button("Edit",type="tertiary",width="stretch")  # Placeholder
 with col3:
     st.button("Delete",type="primary",width="stretch")  # Placeholder
-with col4:
-    st.button("Select All",width="stretch")  # Placeholder
 
 # --- Display Table ---
 st.dataframe(event_df, use_container_width=True)
@@ -86,6 +84,7 @@ if st.session_state.show_add_form:
         else:
 
             st.error("Please enter both Event Type and Version.")
+
 
 
 
