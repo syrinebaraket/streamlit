@@ -182,7 +182,7 @@ def img_to_html(img_path):
 
 st.markdown('''<div class="productContainer">
         <div class="card">
-            <div class="header" style="height: 17rem;"> <img src="./RX/pictures/CortexLogo.png" alt="Product" /> </div>
+            <div class="header" style="height: 17rem;"> <img src="pictures/CortexLogo.png" alt="Product" /> </div>
             <div class="footer">
                 <div class="title">
                     <h2>CORTEX</h2>
@@ -191,8 +191,13 @@ st.markdown('''<div class="productContainer">
             </div>
         </div>
         <div class="card">
-            <div class="header" style="height: 17rem;"> img_to_html('pictures/Rubix.png) alt="Rubix"> </div>
-            <div class="footer">
+            <div class="header" style="height: 17rem;"> alt="Rubix"> </div>''',
+        unsafe_allow_html=True)
+img = Image.open('pictures/CortexLogo.png')
+st.image(img)
+
+
+          st.markdown('''  <div class="footer">
                 <div class="title">
                     <h2>RUBIX</h2>
                 </div>
@@ -226,6 +231,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
