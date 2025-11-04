@@ -39,3 +39,5 @@ Timestamp,Site,Area,AreaID,Cell,CellID,Equipment,Energy,Temperature
 2025-10-21 08:30,2303,Process,B01,CIPStation,C03,CIPLines,14.8,48.8
 2025-10-21 10:00,2303,Process,B01,CIPStation,C03,CIPLines,15.2,49.2
 2025-10-21 12:30,2303,Process,B01,CIPStation,C03,CIPLines,16.0,50.0
+2025-10-21 11:00,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,12.5,46.5
+
