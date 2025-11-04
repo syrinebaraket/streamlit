@@ -181,7 +181,8 @@ def img_to_html(img_path):
 
 
 
-img = Image.open('pictures/CortexLogo.png')
+img = Image.open('RX/pictures/CortexLogo.png')
+st.write(img)
 st.image(img)
 
 st.html(
@@ -207,6 +208,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
