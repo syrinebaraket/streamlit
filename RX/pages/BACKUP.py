@@ -196,8 +196,7 @@ st.markdown('''<div class="productContainer">
 img = Image.open('pictures/CortexLogo.png')
 st.image(img)
 
-
-          st.markdown('''  <div class="footer">
+st.markdown('''<div class="footer">
                 <div class="title">
                     <h2>RUBIX</h2>
                 </div>
@@ -231,6 +230,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
