@@ -64,9 +64,7 @@ filtered_metrics = metrics_df[
     (metrics_df['AreaID'] == selected_area_id) &
     (metrics_df['Cell'] == selected_cell) &
     (metrics_df['CellID'] == selected_cell_id) &
-    (metrics_df['Equipment'].isin(selected_equipment)) &
-    (metrics_df['Timestamp'] >= start_datetime) &
-    (metrics_df['Timestamp'] <= end_datetime)
+    (metrics_df['Equipment'].isin(selected_equipment))
 ]
 
 # --- Main Content ---
@@ -145,9 +143,19 @@ st.plotly_chart(fig_status, use_container_width=True)
    
 
 
+color_palettes = {
+    'Temperature': ['#FF5733', '#D68910', '#900C3F'],
+    'Energy': [ '#1B4F72', '#28B463', '#1D8348'],
+    'Flowrate': ['#3357FF', '#2E86C1', '#1B4F72'],
+    'Pressure': ['#F39C12', '#D68910', '#B9770E'],
+    'Vibration': ['#8E44AD', '#6C3483', '#512E5F']
+}
+
 # --- Parameter Charts ---
-st.subheader("Performance Metrics")
-for param in selected_params:
+if filtered_metrics.empty:
+    st.warning("No metrics found for the selected filters and time range.")
+else:
+   for param in selected_params:
     fig = px.line(
         filtered_metrics,
         x='Timestamp',
@@ -155,6 +163,6 @@ for param in selected_params:
         color='Equipment',
         title=f'{param} Over Time',
         markers=True,
-        color_discrete_sequence=['#13B1EE'] * len(filtered_metrics['Equipment'].unique())
+        color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly)
     )
     st.plotly_chart(fig, use_container_width=True)
