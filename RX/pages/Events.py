@@ -72,7 +72,6 @@ filtered_metrics = metrics_df[
 
 # --- Main Content ---
 
-st.markdown(f"**Site:** `{selected_site}` / **Area:** `{selected_area}` / **Cell:** `{selected_cell}` / **CellID:** `{selected_cell_id}` / **Equipment:** `{selected_equipment}`")
 st.markdown(f"**Site:** `{selected_site}` /  `{selected_area}` /  `{selected_area_id}` /  `{selected_cell}` / `{selected_cell_id}` / `{selected_equipment}`")
 
 
