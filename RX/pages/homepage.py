@@ -103,7 +103,8 @@ with col2:
     
     
 with col3:
-    st.image("RX/pictures/EventPortal.png", width=300)
+    
+    if st.image("RX/pictures/EventPortal.png", width=300):
     st.switch_page("pages/Events.py")
 
 
@@ -131,6 +132,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
