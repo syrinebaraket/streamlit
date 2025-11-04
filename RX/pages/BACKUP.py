@@ -3,7 +3,7 @@ from PIL import Image
 
 
 st.html(
-"<div class="productContainer">
+'''<div class="productContainer">
         <div class="card">
             <div class="header" style="height: 17rem;"> <img src="images/CortexLogo.png" alt="Product" /> </div>
             <div class="footer">
@@ -23,7 +23,8 @@ st.html(
             </div>
         </div>
             </div>
-            <script src="navscript.js" defer></script>"
+            <script src="navscript.js" defer></script>'''
 )
+
 
 
