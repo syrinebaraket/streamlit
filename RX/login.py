@@ -38,26 +38,12 @@ st.markdown("""
             justify-content: center;
             margin-bottom: 1rem;
         }
-        .login-button {
-            background-color: #0054A8;
-            color: white;
-            font-weight: bold;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            width: 100%;
-            margin-top: 1rem;
-        }
-        .cancel-button {
-            background-color: #ccc;
-            color: black;
-            font-weight: bold;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            width: 100%;
-            margin-top: 0.5rem;
-        }
+        button[kind="secondary"] {
+        background-color: green !important;
+        color: white !important;
+        font-weight: bold;
+        border-radius: 6px;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -70,7 +56,7 @@ st.markdown('<div class="login-header">Sign in </div>', unsafe_allow_html=True)
 username = st.text_input("Username", placeholder="Enter your username")
 password = st.text_input("Password", placeholder="Enter your password", type="password")
 
-if st.button("Sign in", key="login", help="Click to log in"):
+if st.button("Sign in", type="secondary",width="stretch",key="login", help="Click to log in"):
     if username == "TechTeam" and password == "danone123":  # Replace with secure logic
         st.success("Login successful!")
         st.session_state.logged_in = True
@@ -83,9 +69,10 @@ if st.button("Sign in", key="login", help="Click to log in"):
     else:
         st.error("Invalid credentials. Please try again.")
 
-st.button("Cancel", key="cancel")
+st.button("Cancel", width="stretch",key="cancel")
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
