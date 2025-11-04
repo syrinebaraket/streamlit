@@ -32,6 +32,7 @@ Timestamp,Site,Area,AreaID,Cell,CellID,Equipment,Energy,Temperature
 2025-10-19 08:00,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,10.0,44.0
 2025-10-19 09:30,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,11.2,45.2
 2025-10-19 11:00,1001,Utilities,A01,AirCompressorRoom,C01,Air Compressor,12.5,46.5
+2025-10-19 11:00,1001,Utilities,A01,AirCompressorRoom,C01,Boiler,18.5,40.5
 2025-10-19 13:30,2303,Process,B01,CIPStation,C03,CIPLines,13.8,47.8
 2025-10-19 15:00,2303,Process,B01,CIPStation,C03,CIPLines,14.0,48.0
 2025-10-20 09:00,0076,Packaging,C01,PackagingLine,C04,Conveyors,9.5,43.5
@@ -43,4 +44,5 @@ Timestamp,Site,Area,AreaID,Cell,CellID,Equipment,Energy,Temperature
 2025-10-21 10:00,2303,Process,B01,CIPStation,C03,CIPLines,15.2,49.2
 
 2025-10-21 12:30,2303,Process,B01,CIPStation,C03,CIPLines,16.0,50.0
+
 
