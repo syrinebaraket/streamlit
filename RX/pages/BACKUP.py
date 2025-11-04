@@ -168,7 +168,29 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-
+st.markdown('''<div class="productContainer">
+        <div class="card">
+            <div class="header" style="height: 17rem;"> <img src="./RX/pictures/CortexLogo.png" alt="Product" /> </div>
+            <div class="footer">
+                <div class="title">
+                    <h2>CORTEX</h2>
+                </div>
+                <p>Data Connectivity</p> <button class="buyNow"  onclick="window.location.href='CORTEX.html'">OPEN</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header" style="height: 17rem;"> <img src="RX/pictures/Rubix.png" alt="Rubix"> </div>
+            <div class="footer">
+                <div class="title">
+                    <h2>RUBIX</h2>
+                </div>
+                <p>Data Modeling</p> <button class="buyNow" onclick="window.location.href='RUBIX.html'">OPEN</button>
+            </div>
+        </div>
+            </div>
+            <script src="navscript.js" defer></script>''',
+        unsafe_allow_html=True
+    )
 st.html(
 '''<div class="productContainer">
         <div class="card">
