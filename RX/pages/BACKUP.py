@@ -2,220 +2,72 @@ import streamlit as st
 from PIL import Image
 
 
-# Check login status
-if "logged_in" not in st.session_state or not st.session_state.logged_in:
-    st.warning("Please log in to access this page.")
-    st.stop()
-
 st.html(
-    """
-<style>
-[data-testid="stSidebarContent"] {
-    color: white;
-}
-</style>
-"""
+"<body>
+  
+    <nav  class="sidebar locked">
+        <div class="logo_items flex">
+          <span class="nav_image">
+            <img src="images/rc.png" alt="logo_img" />
+          </span>
+          <span class="logo_name">CORTEX-RUBIX</span>
+          <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+          <i class="bx bx-x" id="sidebar-close"></i>
+        </div>
+  
+        <div class="menu_container">
+          <div class="menu_items">
+            
+  
+            <ul class="menu_item">
+              <div class="menu_title flex">
+                <span class="title">Setting</span>
+                <span class="line"></span>
+              </div>
+              <li class="item">
+                <a href="home.html" class="link flex">
+                  <i class="bx bx-home"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="ipconfiguration.html" class="link flex">
+                  <i class="bx bx-cog"></i>
+                  <span>IP Configuration</span>
+                </a>
+              </li>
+              
+              
+            </ul>
+          </div>
+  
+         
+        </div>
+      </nav> 
+  
+
+
+    <div class="productContainer">
+        <div class="card">
+            <div class="header" style="height: 17rem;"> <img src="images/CortexLogo.png" alt="Product" /> </div>
+            <div class="footer">
+                <div class="title">
+                    <h2>CORTEX</h2>
+                </div>
+                <p>Data Connectivity</p> <button class="buyNow"  onclick="window.location.href='CORTEX.html'">OPEN</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header" style="height: 17rem;"> <img src="images/Rubix.png" alt="Rubix"> </div>
+            <div class="footer">
+                <div class="title">
+                    <h2>RUBIX</h2>
+                </div>
+                <p>Data Modeling</p> <button class="buyNow" onclick="window.location.href='RUBIX.html'">OPEN</button>
+            </div>
+        </div>
+            </div>
+            <script src="navscript.js" defer></script>
+</body>"
+    
 )
-# --- Page Config ---
-st.set_page_config(page_title="RUBIX Platform", layout="wide")
-
-# --- Header ---
-st.markdown("""
-    <style>
-        .header {
-            background-color: #0054A8;
-            border-radius: 10px;
-            padding: 1rem;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 0 !important;
-
-        }
-        .tile {
-            border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .catalog { background-color: #00AEEF; }
-        .factory { background-color: #003B70; }
-        .data { background-color: #6BBE44; }
-        .footer {
-            margin-top: 2rem;
-            font-size: 14px;
-            color: gray;
-            text-align: center;
-        }
-        .feedback-tab {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #0077C8;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-            font-weight: bold;
-        }
-         .highlighted-text {
-            background-color: #00ACED;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 0px;
-        }
-
-    </style>
-    <div class="header"> <span class="highlighted-text">Homepage</span></div>
-""", unsafe_allow_html=True)
-
-
-
-# --- Tiles ---
-st.markdown("<br>", unsafe_allow_html=True)
-col1, col2,col3,col4= st.columns(4)
-
-with col2:
-    st.image("pictures/design.png", width=300)
-    
-    
-with col3:
-    st.image("pictures/design.png", width=300)
-    st.markdown('<a href="app.py">', unsafe_allow_html=True)
-
-
-
-
-# --- Feedback Tab ---
-st.markdown("""
-    <div class="feedback-tab">Feedback</div>
-""", unsafe_allow_html=True)
-
-# --- Footer ---
-st.markdown("<div class='footer'>©  RUBIX | DANONE </div>", unsafe_allow_html=True)
-
-
-
-import streamlit as st
-
-# --- Initialize toggle state ---
-if "sidebar_expanded" not in st.session_state:
-    st.session_state.sidebar_expanded = False
-
-# --- Styling ---
-st.markdown("""
-    <style>
-        section[data-testid="stSidebar"] {
-            background-color: #24276C;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            z-index: 100;
-            padding-top: 1rem;
-        }
-        div[data-testid="stSidebarContent"] {
-            padding: 0;
-        }
-        .sidebar-icon {
-            font-size: 22px;
-            color: white;  
-            padding: 1rem 0;
-            text-align: left;
-            display: block;
-        }
-
-        .sidebar-item {
-            display: flex;
-            align-items: center;
-            padding: 0.8rem 1rem;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .sidebar-item:hover {
-            background-color: #005fa3;
-        }
-        .sidebar-label {
-            margin-left: 10px;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# --- Toggle Button (☰) ---
-if st.sidebar.button("☰"):
-    st.session_state.sidebar_expanded = not st.session_state.sidebar_expanded
-
-# --- Adjust Sidebar Width Based on State ---
-if st.session_state.sidebar_expanded:
-    st.markdown("""
-        <style>
-            section[data-testid="stSidebar"] {
-                width: 220px !important;
-                min-width: 220px !important;
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
-    # Expanded view: icons + labels
-    st.sidebar.markdown("""
-                        
-        <div class="sidebar-item">🏠<span class="sidebar-label">Homepage</span></div>
-        <div class="sidebar-item">🏭<span class="sidebar-label">Factory</span></div>
-        <div class="sidebar-item">🏬<span class="sidebar-label">Warehouse</span></div>
-        <div class="sidebar-item">👥<span class="sidebar-label">Team</span></div>
-        <div class="sidebar-item">📋<span class="sidebar-label">Checklist</span></div>
-        <div class="sidebar-item">🛠️<span class="sidebar-label">Settings</span></div>
-        <div class="sidebar-item">📖<span class="sidebar-label">Docs</span></div>
-        <div class="sidebar-item">👁️<span class="sidebar-label">Monitor</span></div>
-        <div class="sidebar-item">📊<span class="sidebar-label">Analytics</span></div>
-        <div class="sidebar-item">📈<span class="sidebar-label">Reports</span></div>
-        <div class="sidebar-item">👤<span class="sidebar-label">Profile</span></div>
-    """, unsafe_allow_html=True)
-
-else:
-    st.markdown("""
-        <style>
-            section[data-testid="stSidebar"] {
-                width: 80px !important;
-                min-width: 80px !important;
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
-    # Collapsed view: icons only
-    st.sidebar.markdown("""
-        <div class="sidebar-icon">🏠</div>
-        <div class="sidebar-icon">🏭</div>
-        <div class="sidebar-icon">🏬</div>
-        <div class="sidebar-icon">👥</div>
-        <div class="sidebar-icon">📋</div>
-        <div class="sidebar-icon">🛠️</div>
-        <div class="sidebar-icon">📖</div>
-        <div class="sidebar-icon">👁️</div>
-        <div class="sidebar-icon">📊</div>
-        <div class="sidebar-icon">📈</div>
-        <div class="sidebar-icon">👤</div>
-    """, unsafe_allow_html=True)
-
-def Baseball(): st.sidebar.page_link('pages/baseball.py', label='Baseball', icon='⚾')
-Baseball()
-st.markdown("""
-    <style>
-        /* Sidebar text color */
-        [data-testid="stSidebar"] .css-1v3fvcr, 
-        [data-testid="stSidebar"] .css-10trblm, 
-        [data-testid="stSidebar"] .css-1cpxqw2 {
-            color: white !important;
-        }
-
-        /* Optional: Sidebar background */
-        [data-testid="stSidebar"] {
-            background-color: #003B70;
-        }
-    </style>
-""", unsafe_allow_html=True)
