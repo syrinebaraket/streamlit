@@ -76,7 +76,7 @@ if st.button("Sign in", key="login", help="Click to log in"):
         st.session_state.logged_in = True
         sleep(1)
 
-        st.switch_page("RX/pages/homepage.py")
+        st.switch_page("pages/homepage.py")
 
 
 
@@ -86,5 +86,6 @@ if st.button("Sign in", key="login", help="Click to log in"):
 st.button("Cancel", key="cancel")
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
