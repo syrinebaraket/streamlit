@@ -181,7 +181,7 @@ def img_to_html(img_path):
 
 
 
-img = Image.open('RX/pictures/RubixLogo.png')
+img = Image.open('RX/pictures/Rubix.png')
 st.write(img)
 st.image(img)
 
@@ -208,6 +208,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
