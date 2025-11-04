@@ -71,8 +71,8 @@ filtered_metrics = metrics_df[
 
 
 # --- Main Content ---
-st.subheader("Equipment Events")
-st.markdown(f"**Site:** `{selected_site}` | **Area:** `{selected_area}` | **Cell:** `{selected_cell}`")
+
+st.markdown(f"**Site:** `{selected_site}` / **Area:** `{selected_area}` / **Cell:** `{selected_cell}` / **Cell:** `{selected_cell_id}` / **Equipment:** `{equipment}`")
 
 
 # --- Event Table Filter ---
