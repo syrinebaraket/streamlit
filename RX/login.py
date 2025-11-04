@@ -39,7 +39,7 @@ st.markdown("""
             margin-bottom: 1rem;
         }
         button[kind="secondary"] {
-        background-color: green !important;
+        background-color: #005EB8 !important;
         color: white !important;
         font-weight: bold;
         border-radius: 6px;
@@ -71,6 +71,7 @@ with col2:
     st.button("Cancel",type="primary", key="cancel", width="stretch")
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
