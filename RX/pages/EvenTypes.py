@@ -15,7 +15,7 @@ st.markdown("""
         border-radius: 6px;
     }
 
-    button[kind="primary"] {
+     button[kind="tertiary"] {
         background-color: orange !important;
         color: white !important;
         font-weight: bold;
@@ -42,9 +42,9 @@ with col1:
     if st.button("Add",type="secondary",width="stretch"):
         st.session_state.show_add_form = True
 with col2:
-    st.button("Edit",type="primary",width="stretch")  # Placeholder
+    st.button("Edit",type="tertiary",width="stretch")  # Placeholder
 with col3:
-    st.button("Delete",width="stretch")  # Placeholder
+    st.button("Delete",type="primary",width="stretch")  # Placeholder
 with col4:
     st.button("Select All",width="stretch")  # Placeholder
 
@@ -86,6 +86,7 @@ if st.session_state.show_add_form:
         else:
 
             st.error("Please enter both Event Type and Version.")
+
 
 
 
