@@ -99,11 +99,11 @@ st.markdown("<br>", unsafe_allow_html=True)
 col1, col2,col3,col4= st.columns(4)
 
 with col2:
-    st.image("pictures/design.png", width=300)
+    st.image("RX/pictures/design.png", width=300)
     
     
 with col3:
-    st.image("pictures/design.png", width=300)
+    st.image("RX/pictures/design.png", width=300)
     st.markdown('<a href="app.py">', unsafe_allow_html=True)
 
 
@@ -131,6 +131,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
