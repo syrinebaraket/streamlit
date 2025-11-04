@@ -63,8 +63,7 @@ filtered_metrics = metrics_df[
     (metrics_df['Area'] == selected_area) &
     (metrics_df['AreaID'] == selected_area_id) &
     (metrics_df['Cell'] == selected_cell) &
-    (metrics_df['CellID'] == selected_cell_id)&
-    (events_df['Equipment'].isin(selected_equipment))
+    (metrics_df['CellID'] == selected_cell_id)
 ]
 
 # --- Main Content ---
