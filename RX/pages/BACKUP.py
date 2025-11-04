@@ -3,9 +3,7 @@ from PIL import Image
 
 
 st.html(
-"<body>
-  
-    <nav  class="sidebar locked">
+"<nav  class="sidebar locked">
         <div class="logo_items flex">
           <span class="nav_image">
             <img src="images/rc.png" alt="logo_img" />
@@ -67,7 +65,7 @@ st.html(
             </div>
         </div>
             </div>
-            <script src="navscript.js" defer></script>
-</body>"
+            <script src="navscript.js" defer></script>"
     
 )
+
