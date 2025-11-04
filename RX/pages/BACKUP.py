@@ -184,7 +184,7 @@ def img_to_html(img_path):
 )
 
 st.html(
-'''<div class="productContainer">
+''' <div class="productContainer">
         <div class="card">
             <div class="header" style="height: 17rem;"> <img src="https://sbtest.streamlit.app/~/+/media/6540bd9addaf2a79cbd1c6a9f0885046c84ef1e8accd4bfe736792ca.png" alt="Product" /> </div>
             <div class="footer">
@@ -200,12 +200,13 @@ st.html(
                 <div class="title">
                     <h2>RUBIX</h2>
                 </div>
-                <p>Data Modeling</p> <button class="buyNow" onclick="window.location.href='RX/pages/Events.py'">OPEN</button>
+                <p>Data Modeling</p> <button class="buyNow" onclick="window.location.href='RUBIX.html'">OPEN</button>
             </div>
         </div>
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
