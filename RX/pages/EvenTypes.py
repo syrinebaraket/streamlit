@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # --- File Path ---
-EVENT_FILE = "files/event_definitions.csv"
+EVENT_FILE = "RX/files/event_definitions.csv"
 
 # --- Load Existing Events ---
 if os.path.exists(EVENT_FILE):
@@ -41,7 +41,7 @@ if st.session_state.show_add_form:
     new_event_type = st.text_input("Event Type Name")
     version = st.text_input("Version")
 
-    metrics_df = pd.read_csv("files/metrics.csv", parse_dates=["Timestamp"])
+    metrics_df = pd.read_csv("RX/files/metrics.csv", parse_dates=["Timestamp"])
     available_equipment = sorted(metrics_df['Equipment'].unique())
     selected_equipment = st.multiselect("Select Equipment", available_equipment)
 
@@ -67,3 +67,4 @@ if st.session_state.show_add_form:
         else:
 
             st.error("Please enter both Event Type and Version.")
+
