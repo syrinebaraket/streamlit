@@ -188,7 +188,7 @@ st.image(img)
 st.html(
 '''<div class="productContainer">
         <div class="card">
-            <div class="header" style="height: 17rem;"> <img src="img" alt="Product" /> </div>
+            <div class="header" style="height: 17rem;"> <img src=img alt="Product" /> </div>
             <div class="footer">
                 <div class="title">
                     <h2>CORTEX</h2>
@@ -208,6 +208,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
