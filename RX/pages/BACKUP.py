@@ -183,7 +183,7 @@ def img_to_html(img_path):
 st.html(
 ''' <div class="productContainer">
         <div class="card">
-            <div class="header" style="height: 17rem;"> <img src="/static/CortexLogo.png" alt="Product" /> </div>
+            <div class="header" style="height: 17rem;"> <h2>Event Catalog </h2> </div>
             <div class="footer">
                 <div class="title">
                     <h2>CORTEX</h2>
@@ -203,6 +203,7 @@ st.html(
             </div>
             <script src="navscript.js" defer></script>'''
 )
+
 
 
 
