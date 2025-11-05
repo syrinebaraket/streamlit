@@ -100,7 +100,7 @@ col1, col2,col3,col4= st.columns(4)
 
 with col2:
     st.image("RX/pictures/design.png", width=300)
-    st.markdown(https://sbtest.streamlit.app/Events")
+    st.markdown("[![Foo](http://www.google.com.au/images/nav_logo7.png)](http://google.com.au/)")
     
     
 with col3:
@@ -129,6 +129,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
