@@ -100,9 +100,7 @@ col1, col2,col3,col4= st.columns(4)
 
 with col2:
     st.image("RX/pictures/design.png", width=300)
-    st.markdown("""
-    <a href="https://sbtest.streamlit.app/Events"</a>
-""", unsafe_allow_html=True)
+    st.markdown(https://sbtest.streamlit.app/Events")
     
     
 with col3:
@@ -131,6 +129,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
