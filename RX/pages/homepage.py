@@ -99,12 +99,11 @@ st.markdown("<br>", unsafe_allow_html=True)
 col1, col2,col3,col4= st.columns(4)
 
 with col2:
-    st.image("RX/pictures/design.png", width=300)
-    st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/design.png?raw=true)](http://google.com.au/)")
+    st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/design.png?raw=true)](https://sbtest.streamlit.app/Events)")
     
     
 with col3:
-    st.image("RX/pictures/EventPortal.png", width=300)
+    st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/design.png?raw=true)](https://sbtest.streamlit.app/Events)")
 
 
 # --- Feedback Tab ---
@@ -129,6 +128,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
