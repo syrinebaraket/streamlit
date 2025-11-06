@@ -229,7 +229,7 @@ else:
                                   line=dict(
                                       #color="RoyalBlue",
                                       color="limegreen", #named colors from https://stackoverflow.com/a/72502441/8508004
-                                      width=2, )
+                                      width=2, ))
                     cols[j].plotly_chart(fig, use_container_width=True)
 
 
