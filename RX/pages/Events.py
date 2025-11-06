@@ -205,7 +205,7 @@ color_palettes = {
 }
 
 # --- Parameter Charts ---
-container2 = st.container(key=container)
+container2 = st.container(key="container")
 
 
 if filtered_metrics.empty:
