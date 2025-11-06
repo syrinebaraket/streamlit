@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from datetime import datetime
-
+st.set_page_config(layout="wide") 
 # --- Load Data ---
 events_df = pd.read_csv("RX/files/events.csv", parse_dates=["StartTime", "EndTime"])
 metrics_df = pd.read_csv("RX/files/metrics.csv", parse_dates=["Timestamp"])
