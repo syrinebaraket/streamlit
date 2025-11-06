@@ -234,7 +234,7 @@ else:
                     title=f'{param} Over Time',
                     markers=True,
                     color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly))
-                 with cols[j]:
+                with cols[j]:
                     st.markdown('<div class="plot-border">', unsafe_allow_html=True)
                     st.plotly_chart(fig, use_container_width=True)
                     st.markdown('</div>', unsafe_allow_html=True)
