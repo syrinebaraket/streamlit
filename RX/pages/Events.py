@@ -63,7 +63,7 @@ available_statuses = sorted(events_df['EventType'].unique())
 selected_statuses = st.sidebar.multiselect("Status Types", available_statuses, default=available_statuses)
 st.markdown("""
     <style>
-        .st-key-boxC , .st-key-boxCC, .st-key-boxCP, .container2{  
+        .st-key-boxC , .st-key-boxCC, .st-key-boxCP, .container{  
         padding: 27px;
         width:100%;
         border-radius: 8px;
@@ -205,7 +205,7 @@ color_palettes = {
 }
 
 # --- Parameter Charts ---
-container2 = st.container()
+container2 = st.container(key=container)
 
 
 if filtered_metrics.empty:
