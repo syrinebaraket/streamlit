@@ -7,6 +7,31 @@ st.set_page_config(layout="wide")
 events_df = pd.read_csv("RX/files/events.csv", parse_dates=["StartTime", "EndTime"])
 metrics_df = pd.read_csv("RX/files/metrics.csv", parse_dates=["Timestamp"])
 
+# --- Header ---
+st.markdown("""
+    <style>
+        .header {
+            background-color: #0054A8;
+            border-radius: 10px;
+            padding: 1rem;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 0 !important;
+
+        }
+         .highlighted-text {
+            background-color: #00ACED;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0px;
+        }
+
+
+    </style>
+    <div class="header"> <span class="highlighted-text">Events</span></div>
+""", unsafe_allow_html=True)
+
 # --- Sidebar Filters ---
 st.sidebar.header("Filters")
 selected_site = st.sidebar.selectbox("Site", events_df['Site'].unique())
@@ -23,7 +48,7 @@ available_statuses = sorted(events_df['EventType'].unique())
 selected_statuses = st.sidebar.multiselect("Status Types", available_statuses, default=available_statuses)
 st.markdown("""
     <style>
-        .st-key-boxC{  
+        .st-key-boxC .st-key-boxCC{  
         padding: 27px;
         width:100%;
         border-radius: 8px;
@@ -151,7 +176,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # First row
-with st.container(key="boxC"):
+with st.container(key="boxCC"):
     st.plotly_chart(fig_status, use_container_width=True)
    
 
