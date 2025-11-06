@@ -222,7 +222,7 @@ if filtered_metrics.empty:
     st.warning("No metrics found for the selected filters and time range.")
 else:
     for i in range(0, len(selected_params), 2):
-        cols = st.columns(2)
+        cols = st.columns(2,border=true)
         for j in range(2):
             if i + j < len(selected_params):
                 param = selected_params[i + j]
@@ -235,9 +235,8 @@ else:
                     markers=True,
                     color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly))
                 with cols[j]:
-                    st.markdown('<div class="plot-border">', unsafe_allow_html=True)
                     st.plotly_chart(fig, use_container_width=True)
-                    st.markdown('</div>', unsafe_allow_html=True)
+                    
 
                 
 
