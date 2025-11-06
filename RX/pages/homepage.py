@@ -116,13 +116,12 @@ col1, col2,col3,col4= st.columns(4)
 with col2:
     st.markdown("""
     <style> 
-    .hc2{  
+    img svg{  
 width:100%;
 height:100%;
 box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.8);
 background-color:  #005EB8;
 border-radius: 15px;} </style>
-    <div class="hc2"> <img src="https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/design.png?raw=true" /img></div>
 """, unsafe_allow_html=True)
     
     st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/design.png?raw=true)](https://sbtest.streamlit.app/Events)")
@@ -154,6 +153,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
