@@ -8,8 +8,8 @@ from datetime import datetime
 st.markdown(
     """
     <style>
-        body {
-            background-color: black;
+        .element.style {
+            background-color: #FAFBFC;
         }
     </style>
     """,
