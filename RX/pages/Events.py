@@ -207,6 +207,16 @@ color_palettes = {
 # --- Parameter Charts ---
 container2 = st.container(key="container")
 
+st.markdown("""
+    <style>
+    .plot-border {
+        border: 2px solid black;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 if filtered_metrics.empty:
     st.warning("No metrics found for the selected filters and time range.")
@@ -224,7 +234,11 @@ else:
                     title=f'{param} Over Time',
                     markers=True,
                     color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly))
-                cols[j].plotly_chart(fig, use_container_width=True)
+                 with cols[j]:
+                    st.markdown('<div class="plot-border">', unsafe_allow_html=True)
+                    st.plotly_chart(fig, use_container_width=True)
+                    st.markdown('</div>', unsafe_allow_html=True)
+
                 
 
 
