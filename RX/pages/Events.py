@@ -205,6 +205,7 @@ color_palettes = {
 }
 
 # --- Parameter Charts ---
+container2 = st.container()
 
 
 if filtered_metrics.empty:
@@ -224,7 +225,7 @@ else:
                     markers=True,
                     color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly)
                 )
-                with st.container(key="boxCP"):
+                with container2:
                     cols[j].plotly_chart(fig, use_container_width=True)
 
 
