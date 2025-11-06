@@ -21,6 +21,17 @@ available_equipment = filtered_cell['Equipment'].unique()
 selected_equipment = st.sidebar.multiselect("Equipment", available_equipment, default=available_equipment)
 available_statuses = sorted(events_df['EventType'].unique())
 selected_statuses = st.sidebar.multiselect("Status Types", available_statuses, default=available_statuses)
+st.markdown("""
+    <style>
+        .st-key-boxC{  
+        padding: 27px;
+        width:100%;
+        border-radius: 8px;
+        box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, .7);
+        background-color: white;}
+
+    </style>
+""", unsafe_allow_html=True)
 
 # --- Parameter Selection ---
 all_params = [col for col in metrics_df.columns if col not in ['Timestamp', 'Site', 'Area', 'AreaID', 'Cell', 'CellID', 'Equipment']]
@@ -106,9 +117,8 @@ for _, row in filtered_event_table.iterrows():
             'Equipment': row['Equipment']
         })
 
-with st.container(key="my-box"):
-    status_df = pd.DataFrame(status_points).dropna()
-    fig_status = px.line(
+status_df = pd.DataFrame(status_points).dropna()
+fig_status = px.line(
     status_df,
     x='Timestamp',
     y='Status',
@@ -142,8 +152,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # First row
-
-st.plotly_chart(fig_status, use_container_width=True)
+with st.container(key="boxC"):
+    st.plotly_chart(fig_status, use_container_width=True)
    
 
 
