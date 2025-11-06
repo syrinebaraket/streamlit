@@ -205,6 +205,30 @@ color_palettes = {
 }
 
 # --- Parameter Charts ---
+
+
+if filtered_metrics.empty:
+    st.warning("No metrics found for the selected filters and time range.")
+else:
+    for i in range(0, len(selected_params), 2):
+        cols = st.columns(2)
+        for j in range(2):
+            if i + j < len(selected_params):
+                param = selected_params[i + j]
+                fig = px.line(
+                    filtered_metrics,
+                    x='Timestamp',
+                    y=param,
+                    color='Equipment',
+                    title=f'{param} Over Time',
+                    markers=True,
+                    color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly)
+                )
+                cols[j].plotly_chart(fig, use_container_width=True)
+
+
+
+
 if filtered_metrics.empty:
     st.warning("No metrics found for the selected filters and time range.")
 else:
