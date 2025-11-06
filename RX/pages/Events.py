@@ -106,8 +106,9 @@ for _, row in filtered_event_table.iterrows():
             'Equipment': row['Equipment']
         })
 
-status_df = pd.DataFrame(status_points).dropna()
-fig_status = px.line(
+with st.container(key="my-box"):
+    status_df = pd.DataFrame(status_points).dropna()
+    fig_status = px.line(
     status_df,
     x='Timestamp',
     y='Status',
