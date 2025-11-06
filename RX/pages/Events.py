@@ -3,8 +3,19 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime
 
-[theme]
-backgroundColor="#FAFBFC"
+
+# Set custom background color
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #FAFBFC;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 st.set_page_config(layout="wide") 
 # --- Load Data ---
