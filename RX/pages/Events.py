@@ -42,19 +42,18 @@ for param in ['Flowrate', 'Pressure', 'Vibration']:
         all_params.append(param)
 
 selected_params = st.sidebar.multiselect("Parameters to Plot", all_params, default=['Temperature', 'Energy'])
-
 # --- Date-Time Filter ---
-st.subheader("Select Time Range")
-col1, col2 = st.columns(2)
-with col1:
+with st.container(key="boxC"):
+    st.subheader("Select Time Range")
+    col1, col2 = st.columns(2)
+    with col1:
     start_dt = st.date_input("Start Date", value=events_df['StartTime'].min().date())
     start_time = st.time_input("Start Time", value=datetime.min.time())
-with col2:
+    with col2:
     end_dt = st.date_input("End Date", value=events_df['EndTime'].max().date())
     end_time = st.time_input("End Time", value=datetime.max.time())
-
-start_datetime = datetime.combine(start_dt, start_time)
-end_datetime = datetime.combine(end_dt, end_time)
+    start_datetime = datetime.combine(start_dt, start_time)
+    end_datetime = datetime.combine(end_dt, end_time)
 
 # --- Filtered Data ---
 filtered_events = events_df[
