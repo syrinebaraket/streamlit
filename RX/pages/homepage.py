@@ -46,7 +46,13 @@ cursor: POINTER;
 
 }
 
-
+img, svg {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.8);
+    background-color: #005EB8;
+    border-radius: 15px;
 
 </style>
 """
@@ -145,6 +151,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
