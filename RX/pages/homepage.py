@@ -103,7 +103,7 @@ with col2:
     
     
 with col3:
-    st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/design.png?raw=true)](https://sbtest.streamlit.app/Events)")
+    st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/EventPortal.png?raw=true)](https://sbtest.streamlit.app/Events)")
 
 
 # --- Feedback Tab ---
@@ -128,6 +128,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
