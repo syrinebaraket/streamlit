@@ -53,6 +53,10 @@ img, svg {
     box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.8);
     background-color: #005EB8;
     border-radius: 15px;
+    transform: translateY(-15px);
+    box-shadow: 0px 0px 50px 0px rgb(0 94 184 / 40%);
+    transition: transform 0.8s;
+    cursor: POINTER;}
 
 </style>
 """
@@ -151,6 +155,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
