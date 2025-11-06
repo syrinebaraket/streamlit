@@ -223,8 +223,7 @@ else:
                     color='Equipment',
                     title=f'{param} Over Time',
                     markers=True,
-                    color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly)
-                )
+                    color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly))
                 with container2:
                     cols[j].plotly_chart(fig, use_container_width=True)
 
