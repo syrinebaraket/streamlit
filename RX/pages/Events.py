@@ -48,7 +48,7 @@ available_statuses = sorted(events_df['EventType'].unique())
 selected_statuses = st.sidebar.multiselect("Status Types", available_statuses, default=available_statuses)
 st.markdown("""
     <style>
-        .st-key-boxC .st-key-boxCC{  
+        .st-key-boxC , .st-key-boxCC{  
         padding: 27px;
         width:100%;
         border-radius: 8px;
