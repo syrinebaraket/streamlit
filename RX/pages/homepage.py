@@ -101,12 +101,7 @@ st.markdown("""
             padding: 0.2rem 0.5rem;
             border-radius: 0px;
         }
-        img, svg{  
-width:100%;
-height:100%;
-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.8);
-background-color:  #005EB8;
-border-radius: 15px;} 
+
 
     </style>
     <div class="header"> <span class="highlighted-text">Homepage</span></div>
@@ -148,6 +143,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
