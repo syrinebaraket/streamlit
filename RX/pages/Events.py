@@ -63,7 +63,7 @@ available_statuses = sorted(events_df['EventType'].unique())
 selected_statuses = st.sidebar.multiselect("Status Types", available_statuses, default=available_statuses)
 st.markdown("""
     <style>
-        .st-key-boxC , .st-key-boxCC{  
+        .st-key-boxC , .st-key-boxCC, .st-key-boxCP{  
         padding: 27px;
         width:100%;
         border-radius: 8px;
@@ -224,22 +224,10 @@ else:
                     markers=True,
                     color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly)
                 )
-                cols[j].plotly_chart(fig, use_container_width=True)
+                with st.container(key="boxCP"):
+                    cols[j].plotly_chart(fig, use_container_width=True)
 
 
 
 
-if filtered_metrics.empty:
-    st.warning("No metrics found for the selected filters and time range.")
-else:
-   for param in selected_params:
-    fig = px.line(
-        filtered_metrics,
-        x='Timestamp',
-        y=param,
-        color='Equipment',
-        title=f'{param} Over Time',
-        markers=True,
-        color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly)
-    )
-    st.plotly_chart(fig, use_container_width=True)
+
