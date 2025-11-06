@@ -225,6 +225,11 @@ else:
                     markers=True,
                     color_discrete_sequence=color_palettes.get(param, px.colors.qualitative.Plotly))
                 with container2:
+                    fig.add_shape(
+                                  line=dict(
+                                      #color="RoyalBlue",
+                                      color="limegreen", #named colors from https://stackoverflow.com/a/72502441/8508004
+                                      width=2, )
                     cols[j].plotly_chart(fig, use_container_width=True)
 
 
