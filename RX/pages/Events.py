@@ -191,7 +191,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # First row
-with st.container(key="boxCC"):
+with st.container(border=True):
     st.plotly_chart(fig_status, use_container_width=True)
    
 
