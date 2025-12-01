@@ -3,6 +3,8 @@ plotly
 pandas
 numpy
 st_pages
+opencv-python
 cv2
 qrcode
+
 
