@@ -4,5 +4,5 @@ pandas
 numpy
 st_pages
 cv2
-PIL
 qrcode
+
