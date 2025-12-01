@@ -3,5 +3,8 @@ plotly
 pandas
 numpy
 opencv-python-headless
+qrcode
+PIL
+
 
 
