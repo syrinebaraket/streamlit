@@ -1,13 +1,6 @@
 streamlit
+opencv-python-headless
 plotly
 pandas
 numpy
 st_pages
-PIL
-opencv-python-headless
-cv2
-qrcode
-
-
-
-
