@@ -4,7 +4,10 @@ pandas
 numpy
 st_pages
 opencv-python
+PIL
+opencv-python-headless
 cv2
 qrcode
+
 
 
