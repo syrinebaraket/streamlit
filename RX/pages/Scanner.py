@@ -7,7 +7,25 @@ import qrcode
 from io import BytesIO
 import barcode
 from barcode.writer import ImageWriter
-
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: #24276C;
+        color: white;
+    }
+    [data-testid="stSidebar"] * {
+        color: white;
+    }
+    
+    .stAppToolbar {
+    background-color: #020557;
+    color: white;
+}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.markdown(
     """
     <style>
@@ -255,4 +273,5 @@ with col_scan:
                 st.success(f"Scanned Barcode Data: {info}")
                 st.write(f"Type: {decoded_type[i]}")
         else:
+
             st.warning("No barcode detected.")
