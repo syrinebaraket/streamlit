@@ -3,8 +3,9 @@ plotly
 pandas
 numpy
 opencv-python-headless
-streamlit-qrcode-scanner
+pyqrcode
 PIL
+
 
 
 
