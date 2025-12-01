@@ -3,8 +3,10 @@ plotly
 pandas
 numpy
 opencv-python
+python-barcode
 qrcode
 PIL
+
 
 
 
