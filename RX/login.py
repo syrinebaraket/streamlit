@@ -5,19 +5,7 @@ from st_pages import hide_pages
 
 # --- Page Config ---
 st.set_page_config(page_title="RUBIX Login", layout="centered")
-st.markdown(
-    """
-    <style>
-        body {
-            background-color: #F2F5F8; /* Solid green */
-        }
-        .stApp {
-            background-color: #F2F5F8; /* Streamlit app wrapper */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 st.markdown(
     """
@@ -103,6 +91,7 @@ with col2:
     st.button("Cancel",type="primary", key="cancel", width="stretch")
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
