@@ -1,7 +1,39 @@
 import streamlit as st
 from PIL import Image
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: #24276C;
+        color: white;
+    }
+    [data-testid="stSidebar"] * {
+        color: white;
+    }
+    
+    .stAppToolbar {
+    background-color: #020557;
+    color: white;
+}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #F2F5F8; /* Solid green */
+        }
+        .stApp {
+            background-color: #F2F5F8; /* Streamlit app wrapper */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Check login status
 if "logged_in" not in st.session_state or not st.session_state.logged_in:
     st.warning("Please log in to access this page.")
@@ -21,19 +53,7 @@ st.set_page_config(page_title="RUBIX Platform", layout="wide")
 
 # --- Header ---
 
-st.markdown(
-    """
-    <style>
-        body {
-            background-color: #F2F5F8; /* Solid green */
-        }
-        .stApp {
-            background-color: #F2F5F8; /* Streamlit app wrapper */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 st.markdown("""
     <style>
@@ -234,5 +254,6 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
