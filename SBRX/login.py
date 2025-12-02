@@ -17,7 +17,12 @@ st.markdown(
     [data-testid="stSidebar"] * {
         color: white;
     }
-    
+     .footer {
+            margin-top: 2rem;
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
     .stAppToolbar {
     background-color: #020557;
     color: white;
@@ -91,6 +96,10 @@ with col2:
     st.button("Cancel",type="primary", key="cancel", width="stretch")
 
 st.markdown('</div>', unsafe_allow_html=True)
+
+st.markdown("<div class='footer'>©  RUBIX | CORTEX | DANONE </div>", unsafe_allow_html=True)
+
+
 
 
 
