@@ -50,6 +50,12 @@ st.markdown("""
         border-radius: 12px;
         box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, .7);
         background-color: white;}
+         .footer {
+            margin-top: 2rem;
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
 
     </style>
 """, unsafe_allow_html=True)
@@ -275,5 +281,9 @@ with col_scan:
         else:
 
             st.warning("No barcode detected.")
+
+st.markdown("<div class='footer'>©  RUBIX | CORTEX | DANONE </div>", unsafe_allow_html=True)
+
+
 
 
