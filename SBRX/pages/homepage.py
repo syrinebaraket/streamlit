@@ -163,8 +163,6 @@ with col3:
 
 
 
-# --- Footer ---
-st.markdown("<div class='footer'>©  RUBIX | DANONE </div>", unsafe_allow_html=True)
 
 
 
@@ -175,6 +173,7 @@ if "sidebar_expanded" not in st.session_state:
     st.session_state.sidebar_expanded = False
 
 st.markdown("<div class='footer'>©  RUBIX | CORTEX | DANONE </div>", unsafe_allow_html=True)
+
 
 
 
