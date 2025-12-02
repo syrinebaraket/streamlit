@@ -88,7 +88,7 @@ with col_gen:
         }
 
     </style>
-    <div class="header"> <span class="highlighted-text">QR Code Generator</span></div>
+    <div class="header"> <span class="highlighted-text">Bar/QR Code Generator</span></div>
 """, unsafe_allow_html=True)
     with st.container(key="boxC"):
     # --- Expanded Production Order Inputs ---
@@ -111,7 +111,7 @@ with col_gen:
 
     # --- QR Code Generation ---
      with col1:
-        if st.button("Generate Bar/QR Code", type="secondary", use_container_width=True):
+        if st.button("Generate QR Code", type="secondary", use_container_width=True):
             sap_order = (
                 f"Order:{order_id}|Date:{order_date}|Material:{material}|DLC:{dlc}|Storage:{storage_location}|"
                 f"R3:{r3_status}|BatchInit:{initial_batch}|BatchProc:{process_batch}|WorkCenter:{work_center}|"
@@ -275,4 +275,5 @@ with col_scan:
         else:
 
             st.warning("No barcode detected.")
+
 
