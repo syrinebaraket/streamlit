@@ -306,60 +306,10 @@ with col_scan:
     <div class="header"> <span class="highlighted-text">Live QR</span> Scanner</div>
 """, unsafe_allow_html=True)
 
-
-
- with st.container(key="boxLiveQRk"):
-    st.write("📷 Use your webcam to scan QR codes (local run only).")
-
-    if "orders" not in st.session_state:
-         st.session_state["orders"] = []
-    start_scan = st.button("Start Live Scan")
-
-    if start_scan:
-        cap = cv2.VideoCapture(0)
-        qr_detector = cv2.QRCodeDetector()
-        stframe = st.empty()
-        with st.spinner("🔍 Scanning for QR code..."):
-
-         while True:
-            ret, frame = cap.read()
-            if not ret:
-                st.warning("Failed to access webcam.")
-                break
-
-            data, points, _ = qr_detector.detectAndDecode(frame)
-            stframe.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), channels="RGB")
-
-            if data:
-                st.success(f"Scanned QR Data: {data}")
-                parts = data.split("|")
-                order_info = {}
-                for p in parts:
-                    if ":" in p:
-                        key, val = p.split(":", 1)
-                        order_info[key.strip()] = val.strip()
-                    else:
-                        order_info["OrderID"] = p
-                st.session_state["orders"].append(order_info)
-                break
-
-        cap.release()
-
-    # Show table if we have orders
-    if st.session_state["orders"]:
-        df = pd.DataFrame(st.session_state["orders"])
-        st.dataframe(df)
-
-        total_orders = len(df)
-        total_quantity = df["Quantity"].astype(int).sum() if "Quantity" in df.columns else 0
-
-        st.info(f"Total Orders: {total_orders} | Total Quantity: {total_quantity}")
-
-
  with st.container(key="boxLiveQR"):
     if "orders" not in st.session_state:
           st.session_state["orders"] = []
-    uploaded_photo = st.camera_input("Take a picture of QR")
+    uploaded_photo = st.camera_input("Scann QR")
     if uploaded_photo:
       image = Image.open(uploaded_photo)
       img_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -379,3 +329,4 @@ with col_scan:
                         order_info["OrderID"] = p
                 st.session_state["orders"].append(order_info)
                 break
+
