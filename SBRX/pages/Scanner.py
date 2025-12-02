@@ -359,7 +359,7 @@ with col_scan:
 
  with st.container(key="boxLiveQR"):
       if "orders" not in st.session_state:
-         st.session_state["orders"] = []
+          st.session_state["orders"] = []
       uploaded_photo = st.camera_input("Take a picture of QR")
       if uploaded_photo:
          image = Image.open(uploaded_photo)
@@ -369,15 +369,16 @@ with col_scan:
          if data:
             st.success(f"Scanned QR Data: {data}")
             parts = data.split("|")
-                order_info = {}
-                for p in parts:
-                    if ":" in p:
-                        key, val = p.split(":", 1)
-                        order_info[key.strip()] = val.strip()
-                    else:
-                        order_info["OrderID"] = p
-                st.session_state["orders"].append(order_info)
-                break
+            order_info = {}
+            for p in parts:
+                if ":" in p:
+                    key, val = p.split(":", 1)
+                    order_info[key.strip()] = val.strip()
+                else:
+                    order_info["OrderID"] = p
+            st.session_state["orders"].append(order_info)
+            break
+
 
 
 
