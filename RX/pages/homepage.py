@@ -2,7 +2,39 @@ import streamlit as st
 from PIL import Image
 from modules.nav import Nav
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: #24276C;
+        color: white;
+    }
+    [data-testid="stSidebar"] * {
+        color: white;
+    }
+    
+    .stAppToolbar {
+    background-color: #020557;
+    color: white;
+}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #F2F5F8; /* Solid green */
+        }
+        .stApp {
+            background-color: #F2F5F8; /* Streamlit app wrapper */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Check login status
 if "logged_in" not in st.session_state or not st.session_state.logged_in:
@@ -158,6 +190,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
