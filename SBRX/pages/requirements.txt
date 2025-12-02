@@ -3,3 +3,5 @@ plotly
 pandas
 numpy
 opencv-python-headless
+qrcode
+python-barcode
