@@ -330,3 +330,11 @@ with col_scan:
                 st.session_state["orders"].append(order_info)
                 break
 
+    if st.session_state["orders"]:
+        df = pd.DataFrame(st.session_state["orders"])
+        st.dataframe(df)
+
+        total_orders = len(df)
+        total_quantity = df["Quantity"].astype(int).sum() if "Quantity" in df.columns else 0
+
+        st.info(f"Total Orders: {total_orders} | Total Quantity: {total_quantity}")
