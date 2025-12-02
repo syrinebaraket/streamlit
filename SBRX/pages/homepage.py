@@ -45,7 +45,7 @@ st.markdown("""
 
 left, LLeft, m, Rright, right = st.columns([1, 2, 2, 2, 1])
 with m:
-        st.image("HomePageLogo.png")
+        st.image("SBRX/pages/pictures/HomePageLogo.png")
 # Inject CSS
 
 st.markdown(
@@ -271,5 +271,6 @@ with col6:
             </div>
         </div>
     """, unsafe_allow_html=True)
+
 
 
