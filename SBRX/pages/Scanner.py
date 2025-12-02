@@ -43,7 +43,7 @@ st.markdown(
 
 st.markdown("""
     <style>
-        .st-key-boxC , st-key-boxLiveQR, .st-key-boxCC,.st-key-boxCB{  
+        .st-key-boxC , .st-key-boxLiveQR, .st-key-boxCC,.st-key-boxCB{  
             MARGIN-top:10px;
         padding: 27px;
         width:100%;
@@ -354,6 +354,7 @@ with col_scan:
         total_quantity = df["Quantity"].astype(int).sum() if "Quantity" in df.columns else 0
 
         st.info(f"Total Orders: {total_orders} | Total Quantity: {total_quantity}")
+
 
 
 
