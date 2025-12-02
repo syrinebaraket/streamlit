@@ -362,22 +362,25 @@ with col_scan:
           st.session_state["orders"] = []
       uploaded_photo = st.camera_input("Take a picture of QR")
       if uploaded_photo:
-         image = Image.open(uploaded_photo)
-         img_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-         qr_detector = cv2.QRCodeDetector()
-         data, points, _ = qr_detector.detectAndDecode(img_cv)
-         if data:
-            st.success(f"Scanned QR Data: {data}")
-            parts = data.split("|")
-            order_info = {}
-            for p in parts:
-                if ":" in p:
-                    key, val = p.split(":", 1)
-                    order_info[key.strip()] = val.strip()
-                else:
-                    order_info["OrderID"] = p
-            st.session_state["orders"].append(order_info)
-            break
+            image = Image.open(uploaded_photo)
+            img_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+            qr_detector = cv2.QRCodeDetector()
+      with st.spinner("🔍 Scanning for QR code..."):
+          while True:
+            data, points, _ = qr_detector.detectAndDecode(img_cv)
+            if data:
+                st.success(f"Scanned QR Data: {data}")
+                parts = data.split("|")
+                order_info = {}
+                for p in parts:
+                    if ":" in p:
+                        key, val = p.split(":", 1)
+                        order_info[key.strip()] = val.strip()
+                    else:
+                        order_info["OrderID"] = p
+                st.session_state["orders"].append(order_info)
+                break
+
 
 
 
