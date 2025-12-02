@@ -130,18 +130,7 @@ st.markdown("""
             color: gray;
             text-align: center;
         }
-        .feedback-tab {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #0077C8;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-            font-weight: bold;
-        }
+        
          .highlighted-text {
             background-color: #00ACED;
             color: white;
@@ -168,10 +157,6 @@ with col3:
     st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/EventPortal.png?raw=true)](https://sbtest.streamlit.app/Events)")
 
 
-# --- Feedback Tab ---
-st.markdown("""
-    <div class="feedback-tab">Feedback</div>
-""", unsafe_allow_html=True)
 
 # --- Footer ---
 st.markdown("<div class='footer'>©  RUBIX | DANONE </div>", unsafe_allow_html=True)
@@ -190,6 +175,7 @@ if "sidebar_expanded" not in st.session_state:
 
 
 # --- Adjust Sidebar Width Based on State ---
+
 
 
 
