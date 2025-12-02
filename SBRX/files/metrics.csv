@@ -1,0 +1,42 @@
+Timestamp,Site,Area,AreaID,Cell,CellID,Equipment,Energy,Temperature
+2025-10-14 08:15,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,12.5,45.2
+2025-10-14 09:00,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,13.1,46.0
+2025-10-14 10:30,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,14.0,47.5
+2025-10-14 11:45,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,13.8,46.8
+2025-10-14 12:15,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,10.2,44.0
+2025-10-14 13:00,1001,Utilities,UTL001,AirCompressorRoom,C01,Boiler,9.8,43.5
+2025-10-14 14:30,1001,Utilities,UTL002,AirCompressorRoom,C01,Boiler,11.0,44.2
+2025-10-14 14:30,1001,Utilities,UTL001,AirCompressorRoom,C01,Boiler,11.0,44.2
+2025-10-14 15:45,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,12.2,45.0
+2025-10-14 17:00,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,13.0,46.3
+2025-10-15 09:15,1001,Utilities,UTL001,BoilerRoom,C02,Boiler,8.5,42.0
+2025-10-15 10:00,1001,Utilities,UTL001,BoilerRoom,C02,Boiler,9.1,42.8
+2025-10-16 07:30,2303,Process,B01,CIPStation,C03,CIPLines,15.0,48.5
+2025-10-16 08:45,2303,Process,B01,CIPStation,C03,CIPLines,16.2,49.0
+2025-10-16 10:00,2303,Process,B01,CIPStation,C03,CIPLines,17.5,50.2
+2025-10-16 12:15,2303,Process,B01,CIPStation,C03,CIPLines,18.0,51.0
+2025-10-16 14:30,2303,Process,B01,CIPStation,C03,CIPLines,17.8,50.5
+2025-10-16 15:15,2303,Process,B01,CIPStation,C03,CIPLines,14.2,47.0
+2025-10-17 09:30,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,10.5,44.5
+2025-10-17 11:00,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,11.0,45.0
+2025-10-17 13:30,1001,Utilities,UTL001,BoilerRoom,C02,Boiler,12.2,46.2
+2025-10-17 15:00,1001,Utilities,UTL001,BoilerRoom,C02,Boiler,13.0,47.0
+2025-10-17 16:45,2303,Process,B01,CIPStation,C03,CIPLines,14.5,48.0
+2025-10-18 08:30,0076,Packaging,C01,PackagingLine,C04,Conveyors,9.0,43.0
+2025-10-18 10:00,0076,Packaging,C01,PackagingLine,C04,Conveyors,10.2,44.5
+2025-10-18 12:15,0076,Packaging,C01,PackagingLine,C04,Conveyors,11.5,45.8
+2025-10-18 14:30,0076,Packaging,C01,PackagingLine,C04,Conveyors,12.0,46.5
+2025-10-18 16:00,0076,Packaging,C01,PackagingLine,C04,Conveyors,11.8,46.0
+2025-10-19 08:00,1001,Utilities,UTL001,AirCompressorRoom,C01,Air Compressor,10.0,44.0
+2025-10-19 09:30,1001,Utilities,UTL001,AirCompressorRoom,C01,Boiler,11.2,45.2
+2025-10-19 11:00,1001,Utilities,UTL001,AirCompressorRoom,C01,Boiler,12.5,46.5
+2025-10-19 13:30,2303,Process,B01,CIPStation,C03,CIPLines,13.8,47.8
+2025-10-19 15:00,2303,Process,B01,CIPStation,C03,CIPLines,14.0,48.0
+2025-10-20 09:00,0076,Packaging,C01,PackagingLine,C04,Conveyors,9.5,43.5
+2025-10-20 11:30,0076,Packaging,C01,PackagingLine,C04,Conveyors,10.8,44.8
+2025-10-20 14:00,0076,Packaging,C01,PackagingLine,C04,Conveyors,11.2,45.5
+2025-10-20 16:30,1001,Utilities,UTL001,BoilerRoom,C02,Boiler,12.0,46.0
+2025-10-20 18:00,1001,Utilities,UTL001,BoilerRoom,C02,Boiler,13.5,47.5
+2025-10-21 08:30,2303,Process,B01,CIPStation,C03,CIPLines,14.8,48.8
+2025-10-21 10:00,2303,Process,B01,CIPStation,C03,CIPLines,15.2,49.2
+2025-10-21 12:30,2303,Process,B01,CIPStation,C03,CIPLines,16.0,50.0

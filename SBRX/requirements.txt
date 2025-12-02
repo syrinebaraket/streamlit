@@ -1,0 +1,7 @@
+streamlit
+plotly
+pandas
+numpy
+st_pages
+qrcode
+python-barcode

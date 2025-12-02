@@ -1,0 +1,213 @@
+import streamlit as st
+from PIL import Image
+from modules.nav import Nav
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: #24276C;
+        color: white;
+    }
+    [data-testid="stSidebar"] * {
+        color: white;
+    }
+    
+    .stAppToolbar {
+    background-color: #020557;
+    color: white;
+}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #F2F5F8; /* Solid green */
+        }
+        .stApp {
+            background-color: #F2F5F8; /* Streamlit app wrapper */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Check login status
+if "logged_in" not in st.session_state or not st.session_state.logged_in:
+    st.warning("Please log in to access this page.")
+    st.stop()
+
+st.set_page_config(
+    layout='centered',
+    page_title='Rubix',
+    page_icon="🧩"
+)
+
+
+
+    # Other stuff
+
+
+
+# Check login status
+if "logged_in" not in st.session_state or not st.session_state.logged_in:
+    st.warning("Please log in to access this page.")
+    st.stop()
+
+st.html(
+    """
+<style>
+[data-testid="stSidebarContent"] {
+    color: white;
+}
+.hc2{  
+width:100%;
+height:100%;
+box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.8);
+background-color:  #005EB8;
+border-radius: 15px;} 
+.hc2:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 0px 50px 0px rgb(0 94 184 / 40%);
+   transition: transform 0.8s;
+cursor: POINTER;
+
+}
+
+img, svg {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.8);
+    background-color: #005EB8;
+    border-radius: 15px;}
+.img svg :hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 0px 50px 0px rgb(0 94 184 / 40%);
+    transition: transform 0.8s;
+    cursor: POINTER;
+
+}
+
+</style>
+"""
+)
+# --- Page Config ---
+st.set_page_config(page_title="RUBIX Platform", layout="wide")
+
+# --- Header ---
+st.markdown("""
+    <style>
+        .header {
+            background-color: #0054A8;
+            border-radius: 10px;
+            padding: 1rem;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 0 !important;
+
+        }
+        .tile {
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .catalog { background-color: #00AEEF; }
+        .factory { background-color: #003B70; }
+        .data { background-color: #6BBE44; }
+        .footer {
+            margin-top: 2rem;
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
+        
+         .highlighted-text {
+            background-color: #00ACED;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0px;
+        }
+
+
+    </style>
+    <div class="header"> <span class="highlighted-text">Homepage</span></div>
+""", unsafe_allow_html=True)
+
+
+
+# --- Tiles ---
+st.markdown("<br>", unsafe_allow_html=True)
+col1, col2,col3,col4= st.columns(4)
+
+with col2:
+    st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/design.png?raw=true)](https://sbtest.streamlit.app/Events)")
+    
+    
+with col3:
+    st.markdown("[![Foo](https://github.com/syrinebaraket/streamlit/blob/main/RX/pictures/EventPortal.png?raw=true)](https://sbtest.streamlit.app/Events)")
+
+
+
+# --- Footer ---
+st.markdown("<div class='footer'>©  RUBIX | DANONE </div>", unsafe_allow_html=True)
+
+
+
+import streamlit as st
+
+# --- Initialize toggle state ---
+if "sidebar_expanded" not in st.session_state:
+    st.session_state.sidebar_expanded = False
+
+# --- Styling ---
+
+
+
+
+# --- Adjust Sidebar Width Based on State ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
