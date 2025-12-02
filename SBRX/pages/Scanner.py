@@ -43,7 +43,7 @@ st.markdown(
 
 st.markdown("""
     <style>
-        .st-key-boxC , .st-key-boxCC,.st-key-boxCB{  
+        .st-key-boxC , st-key-boxLiveQR, .st-key-boxCC,.st-key-boxCB{  
             MARGIN-top:10px;
         padding: 27px;
         width:100%;
@@ -282,7 +282,78 @@ with col_scan:
 
             st.warning("No barcode detected.")
 
-st.markdown("<div class='footer'>©  RUBIX | CORTEX | DANONE </div>", unsafe_allow_html=True)
+
+# ---------------- LIVE QR SCANNER (THIRD ROW) ----------------
+with col_scan:
+ st.markdown("""
+    <style>
+        .header {
+            background-color: #0054A8;
+            border-radius: 10px;
+            padding: 0.8rem;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0 !important;
+        }
+        .highlighted-text {
+            background-color: #00ACED;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0px;
+        }
+    </style>
+    <div class="header"> <span class="highlighted-text">Live QR</span> Scanner</div>
+""", unsafe_allow_html=True)
+
+
+
+ with st.container(key="boxLiveQR"):
+    st.write("📷 Use your webcam to scan QR codes (local run only).")
+
+    if "orders" not in st.session_state:
+         st.session_state["orders"] = []
+    start_scan = st.button("Start Live Scan")
+
+    if start_scan:
+        cap = cv2.VideoCapture(0)
+        qr_detector = cv2.QRCodeDetector()
+        stframe = st.empty()
+        with st.spinner("🔍 Scanning for QR code..."):
+
+         while True:
+            ret, frame = cap.read()
+            if not ret:
+                st.warning("Failed to access webcam.")
+                break
+
+            data, points, _ = qr_detector.detectAndDecode(frame)
+            stframe.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), channels="RGB")
+
+            if data:
+                st.success(f"Scanned QR Data: {data}")
+                parts = data.split("|")
+                order_info = {}
+                for p in parts:
+                    if ":" in p:
+                        key, val = p.split(":", 1)
+                        order_info[key.strip()] = val.strip()
+                    else:
+                        order_info["OrderID"] = p
+                st.session_state["orders"].append(order_info)
+                break
+
+        cap.release()
+
+    # Show table if we have orders
+    if st.session_state["orders"]:
+        df = pd.DataFrame(st.session_state["orders"])
+        st.dataframe(df)
+
+        total_orders = len(df)
+        total_quantity = df["Quantity"].astype(int).sum() if "Quantity" in df.columns else 0
+
+        st.info(f"Total Orders: {total_orders} | Total Quantity: {total_quantity}")
 
 
 
