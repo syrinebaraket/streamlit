@@ -137,7 +137,7 @@ with col_gen:
             byte_im = buf.getvalue()
 
             st.download_button(
-                label="⬇️ Download QR Code",
+                label="Download QR Code",
                 data=byte_im,
                 file_name="sap_order_qr.png",
                 mime="image/png"
@@ -314,7 +314,7 @@ with col_scan:
       image = Image.open(uploaded_photo)
       img_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
       qr_detector = cv2.QRCodeDetector()
-      with st.spinner("🔍 Scanning for QR code..."):
+      with st.spinner("Scanning for QR code..."):
           while True:
             data, points, _ = qr_detector.detectAndDecode(img_cv)
             if data:
@@ -338,3 +338,4 @@ with col_scan:
         total_quantity = df["Quantity"].astype(int).sum() if "Quantity" in df.columns else 0
 
         st.info(f"Total Orders: {total_orders} | Total Quantity: {total_quantity}")
+
