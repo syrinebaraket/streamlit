@@ -356,15 +356,14 @@ with col_scan:
         st.info(f"Total Orders: {total_orders} | Total Quantity: {total_quantity}")
 
 
-
  with st.container(key="boxLiveQR"):
-      if "orders" not in st.session_state:
+    if "orders" not in st.session_state:
           st.session_state["orders"] = []
-      uploaded_photo = st.camera_input("Take a picture of QR")
-      if uploaded_photo:
-            image = Image.open(uploaded_photo)
-            img_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-            qr_detector = cv2.QRCodeDetector()
+    uploaded_photo = st.camera_input("Take a picture of QR")
+    if uploaded_photo:
+      image = Image.open(uploaded_photo)
+      img_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+      qr_detector = cv2.QRCodeDetector()
       with st.spinner("🔍 Scanning for QR code..."):
           while True:
             data, points, _ = qr_detector.detectAndDecode(img_cv)
@@ -380,13 +379,3 @@ with col_scan:
                         order_info["OrderID"] = p
                 st.session_state["orders"].append(order_info)
                 break
-
-
-
-
-
-
-
-
-
-
