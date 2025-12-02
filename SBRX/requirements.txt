@@ -5,3 +5,4 @@ numpy
 st_pages
 qrcode
 python-barcode
+opencv-python
