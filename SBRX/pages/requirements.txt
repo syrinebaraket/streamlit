@@ -2,7 +2,4 @@ streamlit
 plotly
 pandas
 numpy
-qrcode
-python-barcode
 opencv-python-headless
-
