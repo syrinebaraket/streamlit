@@ -357,5 +357,19 @@ with col_scan:
 
 
 
+ with st.container(key="boxLiveQRg"):
+      uploaded_photo = st.camera_input("Take a picture of QR")
+      if uploaded_photo:
+         image = Image.open(uploaded_photo)
+         img_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+         qr_detector = cv2.QRCodeDetector()
+         data, points, _ = qr_detector.detectAndDecode(img_cv)
+         if data:
+            st.success(f"Scanned QR Data: {data}")
+
+
+
+
+
 
 
