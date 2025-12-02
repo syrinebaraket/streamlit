@@ -12,7 +12,12 @@ st.markdown(
     [data-testid="stSidebar"] * {
         color: white;
     }
-    
+     .footer {
+            margin-top: 2rem;
+            font-size: 14px;
+            color: gray;
+            text-align: center;
+        }
     .stAppToolbar {
     background-color: #020557;
     color: white;
@@ -169,12 +174,9 @@ import streamlit as st
 if "sidebar_expanded" not in st.session_state:
     st.session_state.sidebar_expanded = False
 
-# --- Styling ---
+st.markdown("<div class='footer'>©  RUBIX | CORTEX | DANONE </div>", unsafe_allow_html=True)
 
 
-
-
-# --- Adjust Sidebar Width Based on State ---
 
 
 
