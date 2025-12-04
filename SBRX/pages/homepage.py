@@ -28,6 +28,9 @@ st.markdown("""
     </style>
     <div class="header"> APPS <span class="highlighted-text">HUB</span></div>
 """, unsafe_allow_html=True)
+left, LLeft, m, Rright, right = st.columns([1, 2, 2, 2, 1])
+with m:
+        st.image("SBRX/pages/pictures/HomePageLogo.png")
 
 st.markdown("""
     <style>
@@ -44,8 +47,7 @@ st.markdown("""
 
 
 left, LLeft, m, Rright, right = st.columns([1, 2, 2, 2, 1])
-with m:
-        st.image("SBRX/pages/pictures/HomePageLogo.png")
+
 # Inject CSS
 
 st.markdown(
@@ -61,6 +63,22 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
+st.markdown("""
+    <style>
+        .st-key-boxC {  
+        MARGIN-top:10px;
+    
+        padding: 40px;
+        width:100%;
+        border-radius: 12px;
+        box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, .7);
+        background-color: #F2F5F8;}
+
+    </style>
+""", unsafe_allow_html=True)
+
 st.markdown(
     """
     <style>
@@ -96,7 +114,7 @@ st.markdown("""
         border: none;
     }
  .highlighted-text-home-blue {
-            background: linear-gradient(to top, #020557 25%, transparent 50%);
+            background: linear-gradient(to top, #020557 100%, transparent 50%);
             color: white;
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
@@ -189,88 +207,104 @@ st.markdown("""
     .app-button:hover {
         background-color: #f0f0f0;
     }
+            
+
+ .flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 220px;
+  perspective: 1000px; /* gives 3D depth */
+  margin: 20px auto;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-box-front {
+  background-color: #0051A2; /* blue front */
+  color: white;
+
+}
+
+.flip-box-back {
+  background-color: #E5EFF8; /* white back */
+  color: #0054A8;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
     </style>
 """, unsafe_allow_html=True)
 
 
 
+def flip_box(title: str, description: str, link: str):
+    """Reusable flip-box component"""
+    html = f"""
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <!-- Front side -->
+        <div class="flip-box-front">
+          <span class="highlighted-text-home-blue" 
+                style="font-weight:bold; font-size:20px;">{title}</span>
+          <div class="divider"></div>
+        </div>
+        <!-- Back side -->
+        <div class="flip-box-back">
+          <p style="font-size:16px; font-weight:500;">
+            {description}
+          </p>
+          <div style="margin-top:10px;">
+            <a href="{link}" target="_blank"
+               style="background:#00ACED; color:WHITE; padding:8px 20px; 
+                      border-radius:50px; text-decoration:none; font-weight:600;">
+               Open
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    """
+    st.markdown(html, unsafe_allow_html=True)
+
+
 # First row
+
 left, col1, col2, col3, right = st.columns([1, 2, 2, 2, 1])
-
-
 with col1:
-    st.markdown("""
-        <div class="rounded-box">
-            <div class="box-content">
-                <span class="highlighted-text-home-yellow">RUBIX CATALOG</span>
-                <div class="divider"></div>
-                <a href="https://rubixcatalog.apps.eu-1c.mendixcloud.com/" class="app-button" target="_blank">OPEN</a>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
+        flip_box("RUBIX CATALOG", "OT equipment model governance tool", "/DataModelling")
 with col2:
-    st.markdown("""
-        <div class="rounded-box">
-            <div class="box-content">
-                <span class="highlighted-text-home-blue">CIP CONTROL TOWER</span>
-                <div class="divider"></div>
-                <a href="/Scanner" class="app-button" target="_self">OPEN</a>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
+        flip_box("CIP CONTROL TOWER", "CIP Dashboard to monitor status and phases", "/DataModelling")
 with col3:
-    st.markdown("""
-        <div class="rounded-box">
-            <div class="box-content">
-            <span class="highlighted-text-home-green">SCANNER</span>
-                <div class="divider"></div>
-                <a href="https://sbrx-log.streamlit.app/Scanner" class="app-button" target="_self">OPEN</a>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
-
+        flip_box("SCANNER", "A tool to scan prod order.", "/DataModelling")
 
 # Second row
 left, col4, col5, col6, right = st.columns([1, 2, 2, 2, 1])
-
 with col4:
-    st.markdown("""
-        <div class="rounded-box">
-            <div class="accent-strip"></div>
-            <div class="box-content">
-            <span class="highlighted-text-home-red">App X</span>
-                <div class="divider"></div>
-                <a href="/Reports" class="app-button" target="_self">Open</a>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
+    flip_box("APP X", "This a sample description for App X", "/DataModelling")
 with col5:
-    st.markdown("""
-        <div class="rounded-box">
-            <div class="accent-strip"></div>
-            <div class="box-content">
-            <span class="highlighted-text-home-orange">App Y</span>
-                <div class="divider"></div>
-                <a href="/Settings" class="app-button" target="_self">Open</a>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
+    flip_box("SAPP Y", "This a sample description for App Y", "/DataModelling")
 with col6:
-    st.markdown("""
-        <div class="rounded-box">
-            <div class="accent-strip"></div>
-            <div class="box-content">
-            <span class="highlighted-text-home-lblue">App Z</span>
-                <div class="divider"></div>
-                <a href="/Help" class="app-button" target="_self">Open</a>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
-
-
+    flip_box("APP Z", "This a sample description for App Z", "/DataModelling")
