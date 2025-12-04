@@ -10,29 +10,15 @@ st.markdown("""
         border-radius: 12px;
         box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, .7);
         background-color: #F2F5F8;}
-
-    </style>
-""", unsafe_allow_html=True)
-
-
-left, LLeft, m, Rright, right = st.columns([1, 2, 2, 2, 1])
-
-# Inject CSS
-
-st.markdown(
-    """
-    <style>
         body {
             background-color: #F2F5F8; /* Solid blue */
         }
         .stApp {
             background-color: #F2F5F8; /* Streamlit app wrapper */
         }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
+    </style>
+""", unsafe_allow_html=True)
 
 st.markdown(
     """
@@ -288,4 +274,5 @@ with col5:
     flip_box("SAPP Y", "This a sample description for App Y", "/DataModelling")
 with col6:
     flip_box("APP Z", "This a sample description for App Z", "/DataModelling")
+
 
