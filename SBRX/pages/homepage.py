@@ -260,11 +260,11 @@ def flip_box(title: str, description: str, link: str):
 
 left, col1, col2, col3, right = st.columns([1, 2, 2, 2, 1])
 with col1:
-        flip_box("RUBIX CATALOG", "OT equipment model governance tool", "/DataModelling")
+        flip_box("RUBIX CATALOG", "OT equipment model governance tool", "https://rubixcatalog.apps.eu-1c.mendixcloud.com/")
 with col2:
-        flip_box("CIP CONTROL TOWER", "CIP Dashboard to monitor status and phases", "/DataModelling")
+        flip_box("CIP CONTROL TOWER", "CIP Dashboard to monitor status and phases", "https://grafana-dev.eu-ot-dev-aks.nead.danet/login")
 with col3:
-        flip_box("SCANNER", "A tool to scan prod order.", "/DataModelling")
+        flip_box("SCANNER", "A tool to scan prod order.", "/Scanner")
 
 # Second row
 left, col4, col5, col6, right = st.columns([1, 2, 2, 2, 1])
@@ -274,5 +274,6 @@ with col5:
     flip_box("SAPP Y", "This a sample description for App Y", "/DataModelling")
 with col6:
     flip_box("APP Z", "This a sample description for App Z", "/DataModelling")
+
 
 
