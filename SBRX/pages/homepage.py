@@ -34,20 +34,6 @@ st.markdown(
 )
 
 
-st.markdown("""
-    <style>
-        .st-key-boxC {  
-        MARGIN-top:10px;
-    
-        padding: 40px;
-        width:100%;
-        border-radius: 12px;
-        box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, .7);
-        background-color: #F2F5F8;}
-
-    </style>
-""", unsafe_allow_html=True)
-
 st.markdown(
     """
     <style>
@@ -68,13 +54,7 @@ st.markdown(
     background-color: #020557;
     color: white;
 }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown("""
-    <style>
-      /* Force the divider to be pure white */
+  /* Force the divider to be pure white */
     .divider {
         width: 60%;
         height: 2px;
@@ -225,7 +205,10 @@ st.markdown("""
   padding: 20px;
 }
     </style>
-""", unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
+
 
 st.markdown("""
     <style>
