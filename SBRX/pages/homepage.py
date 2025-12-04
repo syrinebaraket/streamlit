@@ -1,37 +1,6 @@
 import streamlit as st
 
 st.set_page_config(page_title="Rubix App Hub", layout="wide")
-
-
-
-
-st.markdown("""
-    <style>
-        .header {
-            background-color: #0054A8;
-            border-radius: 10px;
-            padding: 1rem;
-            color: white;
-            font-size: 23px;
-            font-weight: bold;
-            margin-top: 0 !important;
-
-        }
-      
-         .highlighted-text {
-            background-color: #00ACED;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 0px;
-        }
-
-    </style>
-    <div class="header"> APPS <span class="highlighted-text">HUB</span></div>
-""", unsafe_allow_html=True)
-left, LLeft, m, Rright, right = st.columns([1, 2, 2, 2, 1])
-with m:
-        st.image("SBRX/pages/pictures/HomePageLogo.png")
-
 st.markdown("""
     <style>
         .st-key-boxC {  
@@ -258,6 +227,34 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+        .header {
+            background-color: #0054A8;
+            border-radius: 10px;
+            padding: 1rem;
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            margin-top: 0 !important;
+
+        }
+      
+         .highlighted-text {
+            background-color: #00ACED;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0px;
+        }
+
+    </style>
+    <div class="header"> APPS <span class="highlighted-text">HUB</span></div>
+""", unsafe_allow_html=True)
+left, LLeft, m, Rright, right = st.columns([1, 2, 2, 2, 1])
+with m:
+        st.image("SBRX/pages/pictures/HomePageLogo.png")
+
+
 
 
 def flip_box(title: str, description: str, link: str):
@@ -308,3 +305,4 @@ with col5:
     flip_box("SAPP Y", "This a sample description for App Y", "/DataModelling")
 with col6:
     flip_box("APP Z", "This a sample description for App Z", "/DataModelling")
+
