@@ -269,11 +269,12 @@ with col3:
 # Second row
 left, col4, col5, col6, right = st.columns([1, 2, 2, 2, 1])
 with col4:
-    flip_box("APP X", "This a sample description for App X", "/DataModelling")
+    flip_box("APP X", "This a sample description for App X", "/AppX")
 with col5:
     flip_box("SAPP Y", "This a sample description for App Y", "/DataModelling")
 with col6:
     flip_box("APP Z", "This a sample description for App Z", "/DataModelling")
+
 
 
 
