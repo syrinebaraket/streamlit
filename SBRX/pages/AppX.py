@@ -13,7 +13,7 @@ from utils import header_with_highlight
 
 st.set_page_config(page_title="Rubix App X", layout="wide")
 
-with open("style/style.css") as f:
+with open("SBRX/style/style.css") as f:
     css = f.read()
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
@@ -50,5 +50,6 @@ st.markdown("""
         <p>Here where description is written</p>
     </div>
 """, unsafe_allow_html=True)
+
 
  
